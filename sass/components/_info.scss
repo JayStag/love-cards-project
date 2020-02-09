@@ -1,0 +1,30 @@
+/*INFORMATION PAGE*/
+.info {
+    grid-column: col-start 1 / col-end 8;
+    
+}
+
+.about {
+    @include section-setup;
+    
+    &__container {
+        padding: 2rem 2rem;
+        background-color: var(--color-secondary-background);
+        border-radius: 1rem;
+        margin: 5rem 4rem;
+        box-shadow: var(--box-shadow-light);
+    
+    }
+
+    &__heading {
+        margin: 3rem 0;
+        display: grid;
+        grid-column: 1 / span 3;
+
+    }
+
+    &__paragraph {
+        font-size: 2rem;
+        padding: 3rem 0;
+    }
+}

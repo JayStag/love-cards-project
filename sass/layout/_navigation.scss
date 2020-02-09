@@ -1,0 +1,33 @@
+/*HEADER NAVIGATION*/
+.navigation {
+
+    display: grid;
+    justify-content: end;
+
+    &__nav {
+        padding-top: 1rem;
+        
+        &--list {
+            list-style: none;
+        }
+  
+        &--item {
+        display: inline-block;
+        margin-left: 4rem;
+        margin-right: 3rem;
+        }
+
+        &--link:link,
+        &--link:visited {
+            @include link-style;
+            font-size: 1.5rem;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.2s;
+        }
+
+        &--link:hover,
+        &--link:active {
+            border-bottom: 2px solid var(--color-primary);
+        }
+    }
+}

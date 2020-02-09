@@ -1,0 +1,59 @@
+/*TESTIMONIALS*/
+.users {
+    grid-column: col-start 1 / col-end 8;
+}
+
+.user {
+    @include section-setup;
+    grid-template-columns: repeat(3, minmax(min-content, 1fr));
+   
+
+    &__card {
+        background-color: var(--color-secondary-background);
+        box-shadow: var(--box-shadow-light);
+        border-radius: 1rem;
+        padding: 3rem 1rem;
+        margin: 5rem 2rem;
+        
+        display: grid;
+        justify-items: center;
+        grid-row: 2 / 2;
+    
+    }
+
+    &-heading {
+        grid-column: 1 / -1;
+        margin-top: 3rem;
+    }
+
+    &__fig {
+        display: flex;
+        align-items: center;
+    }
+
+    &__box {
+        padding-left: 2rem;
+    }
+
+    &__img {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        margin-left: 2rem;
+    }
+
+    &__name {
+        font-size: var(--default-font-size);
+        
+        
+    }
+
+    &__quote{
+        font-style: italic;
+        font-size: var(--default-font-size);
+        padding-bottom: 3rem;
+        
+        
+        
+    }
+}

@@ -1,0 +1,16 @@
+/*FOOTER*/
+.footer {
+    background-color: var(--color-grey-dark);
+    grid-column: full-start / full-end;
+
+    height: 15rem;
+    
+    &__text {
+        color: var(--color-white);
+        font-size: 1.5rem;
+        text-align: center;
+        padding-top: 5rem;
+    }
+
+   
+}

@@ -1,0 +1,237 @@
+<!-- 
+***************************************LOVE CARDS ORACLE PROJECT**************************************
+******************************************************************************************************
+This website is created for Genie Joseph. It's purpose is to provide advice and guidance to those who have struggled to find a meaningful connection in thier love life. The content is based off of the work of Genie's blogs and the principles discussed in them. The blog posts are linked on this page in the sidebar from Healthy-Relationship-Advice.com.
+
+Project began in October, 2019
+First iteration of this website was completed in February 7th, 2020.
+
+Work still to be done:
+-make changes based on design feedback
+-***Add Javascript to the reading buttons***
+-determine logic for the "inspired reading" button
+-decide if popups or a new page is the way to go for reading displays
+-add links to the above website; determine if the links cab be randomized and refreshed over a set amount of time
+-get real testimonials to replace the placeholders
+-determine how to make direction arrows clickable and replace the direction drop down
+-same with colors; show real colors instead of a dropdown
+-determine if there is a icon for the site
+-add social media icons, if any
+-make site responsive -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+      <link rel="stylesheet" href="css/icon-font.css">
+      
+      <link rel="stylesheet" href="css/style.css">
+     <!-- <link rel="shortcut icon" type="image/png" href="img/favicon.png">-->
+      
+     <!--
+         HTML structure using the BEM methodology. 
+     -->
+      <title>Love Cards Oracle</title>
+    </head>
+    <body class="container">
+        <header class="header">
+            <!-- <div class="header__logo-box">
+                spot for img logo class="header__logo
+            </div> -->
+            <div class="header__text-box">
+                <h1 class="heading-primary">
+                    <span class="heading-primary--main">Love Cards Oracle</span>
+                </h1>
+                <h2 class="heading-primary">
+                    <span class="heading-primary--sub">Whatever the Problem</span>
+                    <span class="heading-primary--sub">Love is the answer</span>
+                </h2>
+            </div>
+            <div class="navigation">
+                <nav class="navigation__nav">
+                      <ul class="navigation__nav--list">
+                          <li class="navigation__nav--item"><a href="#" class="navigation__nav--link">About</a></li>
+                          <li class="navigation__nav--item"><a href="#" class="navigation__nav--link">Reading</a></li>
+                          <li class="navigation__nav--item"><a href="#" class="navigation__nav--link">Testimonials</a></li>
+                          <li class="navigation__nav--item"><a href="#" class="navigation__nav--link">Genie</a></li>
+                      </ul> 
+                </nav>
+            </div>
+        </header>
+        <div class="sidebar">
+            <div class="sidebar__blog">
+                <h2 class="heading-secondary sidebar__blog--heading">Genie's Blogs</h2>
+                <ul class="sidebar__blog--list">
+                    <li class="sidebar__blog--item"><a href="#" class="sidebar__blog--link">blog post 1</a></li>
+                    <li class="sidebar__blog--item"><a href="#" class="sidebar__blog--link">blog post 2</a></li>
+                    <li class="sidebar__blog--item"><a href="#" class="sidebar__blog--link">blog post 3</a></li>
+                    <li class="sidebar__blog--item"><a href="#" class="sidebar__blog--link">blog post 4</a></li>
+                    <li class="sidebar__blog--item"><a href="#" class="sidebar__blog--link">blog post 5</a></li>
+                </ul>
+            </div>
+        </div>
+        <section class="info">
+            <div class="about">
+                <h2 class="heading-secondary about__heading">
+                What's holding you back from the kind of love you desire?
+                </h2>
+                <div class="about__container">
+                    <p class="paragraph about__paragraph">
+                        Dissolve Obstacles to Love Through Deeper Insight into Patterns
+                    </p>
+                </div>
+                <div class="about__container">
+                    <p class="paragraph about__paragraph">
+                        Release Old Blocks-Learn how to open your heart to true intimacy
+                    </p>
+                </div>
+                <div class="about__container">
+                    <p class="paragraph about__paragraph">
+                        Oracle Cards for those who seek to open the door for found love
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="cards">
+            <div class="reading">
+                <h2 class="heading-secondary reading__heading">Here is the guidance you seek</h2>
+                <div class="reading__container">
+                    <p class="paragraph reading__container--paragraph">This is not about predictions or fortune-telling. 
+                    </p>
+                    <p class="paragraph reading__container--paragraph">This is about understanding the changes you need to make to find the partnership of your dreams.
+                    </p>
+                    <div class="reading__cards">
+                        <div class="reading__cards-cupid">
+                            <p class="paragraph reading__paragraph">Take a chance with “Cupid’s Arrow</p>
+                            <button class="btn-inline"><a class="btn-text" href="#popup">Cupid's Arrow</a></button>
+                        </div>
+                        <div class="reading__cards-guidance">
+                            <p class="paragraph reading__paragraph">Seek guidance through inspired action</p>
+                            <form action="#" class="reading__form">
+                                <input type="interger" class="reading__form-number" placeholder="Enter a number 000-300" required>
+                            </form>
+
+                            <select name="color" id="color" class="reading__menu-color" required>
+                                <option value="blue" class="reading__menu-color">Blue</option>
+                                <option value="red" class="reading__menu-color">Red</option>
+                                <option value="orange" class="reading__menu-color">Orange</option>
+                                <option value="green" class="reading__menu-color">Green</option>
+                                <option value="yellow" class="reading__menu-color">Yellow</option>
+                                <option value="purple" class="reading__menu-color">Purple</option>
+                            </select>
+
+                            <select name="direction" id="direction" class="reading__menu-direction">
+                                <option value="north" class="reading__menu-direction">North</option>
+
+                                <option value="south" class="reading__menu-direction">South</option>
+
+                                <option value="east" class="reading__menu-direction">East</option>
+
+                                <option value="west" class="reading__menu-direction">West</option>
+
+                                <option value="north-east"
+                                class="reading__menu-direction">North East</option>
+
+                                <option value="north-west" class="reading__menu-direction">North West</option>
+
+                                <option value="south-east" class="reading__menu-direction">South East</option>
+
+                                <option value="south-west" class="reading__menu-direction">South West</option>
+                            </select>
+                            <button class="btn-inline"><a class="btn-text" href="#">Inspired Guidance</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="users">
+            <div class="user">
+                <h2 class="heading-secondary user-heading">Meet others like you</h2>
+                <figure class="user__card">
+                    <blockquote class="user__quote">
+                        &quot;Genie's advice has changed my whole life.&quot;
+                    </blockquote>
+                    <figcaption class="user__fig">
+                        <img src="../img/user1.jpg" alt="user" class="user__img">
+                        <div class="user__box">
+                            <p class="user__name">Brittany Bates</p>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure class="user__card">
+                    <blockquote class="user__quote">
+                        &quot;Love card readings really helped give me perspective on my relationships.&quot;
+                    </blockquote>
+                    <figcaption class="user__fig">
+                        <img src="../img/user2.jpg" alt="user" class="user__img">
+                        <div class="user__box">
+                            <p class="user__name">Kate Smith</p>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure class="user__card">
+                    <blockquote class="user__quote">
+                        &quot;I found true inspiration to love again.&quot;
+                    </blockquote>
+                    <figcaption class="user__fig">
+                        <img src="../img/user3.jpg" alt="user" class="user__img">
+                        <div class="user__box">
+                            <p class="user__name">Dolores Ford</p>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="genies">
+            <div class="genie">
+                <h2 class="heading-secondary genie-heading">Genie Joseph</h2>
+                <div class="genie__container genie__container-img">
+                    <img src="../img/genie.jpg" alt="genie" class="genie__img">
+                </div>
+                <div class="genie__container genie__container-text">
+                    <div class="genie__about">
+                        <ul class="genie__list">
+                            <li class="genie__list-item">Relationship Coach 20 + years</li>
+                            <li class="genie__list-item">Co-Host of Love Life Radio 6 + years</li>
+                            <li class="genie__list-item">Published Author</li>
+                            <li class="genie__list-item">Media-Savvy – Frequent Guest on Radio & TV shows</li>
+                            <li class="genie__list-item">Experienced Public Speaker and Seminar Presenter</li>
+                            <li class="genie__list-item">Licensed Minister</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>  
+        </section>
+    
+        <footer class="footer">
+            <div class="footer__text">
+                &copy; Copyright Genie Joseph, 2020. All rights reserved. 
+            </div>
+        </footer>
+        
+        <div class="popup" id="popup">
+            <div class="popup__content">
+                <div class="popup__left">
+                    <img src="../img/psyche-large.jpg" alt="angel image" class="popup__img">
+                </div>
+                <div class="popup__right">
+                    <a href="#cards" class="popup__close">&times;</a>
+                    <p class="popup__num">2</p>
+                    <h2 class="heading-secondary popup-heading">Daydreamer</h2>
+                    <h3 class="heading-tertiary">Trust that real life is better than your fantasy</h3>
+                    <p class="popup__text">
+                        Do not get too attached to fantasies that live only in the mind. You can spin your wheels in hope. If you don’t take action that leads you in new directions, you will stay stuck. Sometimes we have to let go of something we have hoped for in order to receive something greater, more real. To bring your dreams to life, you must release the attachment to long-held fantasies.
+                        Real life wants to deliver something even better than you could imagine, but first you mustempty your cup, and let go of old self-doubt and hopelessness. What will come will be better than your wildest dreams..
+                    </p>
+                    <h3 class="heading-tertiary popup-guide">Guidance: I allow myself to experience something real and wonderful.</h3>
+                    <p class="popup__genie">&copy; Genie Joseph, PhD</p>
+                </div>
+            </div>
+        </div>        
+    </body>
+    
+    
+</html>

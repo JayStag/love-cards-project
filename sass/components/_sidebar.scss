@@ -1,0 +1,46 @@
+/*SIDEBAR BLOG*/
+.sidebar {
+    grid-column: col-start 9 / -1;
+    grid-row: 2 / span 4;
+    background-color: var(--color-secondary-background);
+    font-size: 1.5rem;
+    border-left: 3px solid var(--color-primary-background);
+    border-radius: 1rem;
+
+    &__blog {
+        display: grid;
+        background-color: var(--color-primary-background);
+        box-shadow: var(--box-shadow-dark);
+        justify-items: center;
+        margin: 6rem 2rem;
+        padding: 2rem 1rem;
+        border-radius: 1rem;
+        
+        
+        &--list {
+            list-style: none;
+            padding: 3px;
+        }
+    
+        &--item {
+            font-weight: 500;
+            padding: 3px;
+        }
+    
+        &--link {
+            @include link-style;
+            padding: 3px;
+    
+        }
+    
+        &--heading {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+}
+
+
+
+

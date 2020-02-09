@@ -1,0 +1,96 @@
+/*CARD READINGS*/
+.cards {
+    grid-column: col-start 1 / col-end 8;
+}
+
+.reading {
+    @include section-setup;
+
+    &__heading {
+        margin-top: 5rem;
+    }
+    
+    
+    &__container {
+        background-color: var(--color-secondary-background);
+        box-shadow: var(--box-shadow-light);
+        border-radius: 1rem;
+        margin: 5rem 3rem;
+        padding: 3rem 7rem;
+
+        display: grid;
+
+        &--paragraph {
+            padding-bottom: 3rem;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+      
+
+    }
+
+    &__paragraph {
+        text-transform: uppercase;
+        color: var(--color-white);
+        padding-top: 2rem;
+        align-self: start;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 3rem;
+        margin-top: 2rem;
+    }
+
+    &__cards-cupid {
+        background-color: var(--color-primary);
+        box-shadow: var(--box-shadow-light);
+        border-radius: 1rem;
+
+        display: grid;
+        justify-items: center;
+        align-items: end;        
+      
+    }
+
+    &__cards-guidance {
+        background-color: var(--color-primary);
+        box-shadow: var(--box-shadow-light);
+        border-radius: 1rem;
+        height: 50rem;
+
+        display: grid;
+        justify-items: center;
+        align-content: space-between;
+        align-items: end;
+     
+    }
+
+
+    &__form {
+       // margin-bottom: 2rem;
+       // padding: 2rem 0;
+
+    }
+
+    &__form-number {
+        @include form-dropdown;
+        
+    }
+
+    &__menu-color {
+        //margin-bottom: 6rem;
+        //padding: 2rem 0;
+        @include form-dropdown;
+    }
+
+    &__menu-direction {
+       // margin-top: 7rem;
+        //margin-bottom: 13rem;
+        //padding: 2rem 0;
+        @include form-dropdown;
+    }
+
+
+}
