@@ -1,0 +1,168 @@
+/*CARD READINGS*/
+.cards {
+    grid-column: col-start 1 / col-end 8;
+}
+
+.reading {
+    @include section-setup;
+
+    &__heading {
+        margin-top: 3rem;
+    }
+
+    &__paragraph {
+        color: $color-white;
+        padding: 2rem 0;
+        font-size: 2rem;
+    }
+    
+    &__container {
+        background-color: $color-secondary-background;
+        box-shadow: $box-shadow-light;
+        border-radius: 1rem;
+        margin: 3rem 3rem;
+        padding: 3rem 7rem;
+        width: 80%;
+
+        display: grid;
+        align-content: center;
+        justify-content: center;
+    
+    }
+
+    &__cards {
+        // display: grid;
+        // grid-template-columns: repeat(2, 1fr);
+        // grid-column-gap: 3rem;
+
+        &--cupid {
+            background-color: $color-primary;
+            box-shadow: $box-shadow-light;
+            border-radius: 1rem;
+            display: grid;
+            justify-items: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            width: 100%;
+        }
+    
+        &--guidance {
+            background-color: $color-primary;
+            box-shadow: $box-shadow-light;
+            border-radius: 1rem;
+            padding: 2rem 0;
+            width: 100%;
+    
+            display: grid;
+            justify-items: center;
+        }
+
+        &--paragraph {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            color: $color-white;
+        }
+    }
+
+    &__input {
+       padding: 2rem 2rem;
+       display: flex;
+       justify-content: space-between;
+       align-content: space-between;
+
+       &--number {
+        @include form-dropdown;
+        }
+
+        &--color {
+        //margin-bottom: 6rem;
+        //padding: 2rem 0;
+        @include form-dropdown;
+        }
+
+        &--direction {
+       // margin-top: 7rem;
+        //margin-bottom: 13rem;
+        //padding: 2rem 0;
+        @include form-dropdown;
+        }
+    }
+/*CARD READINGS RESULTS
+
+The card is divide to left and right sides.*/
+
+// Card Results Headings Right Styles
+    &-heading {
+        font-size: 3rem;
+        border-bottom: 2px solid $color-secondary;
+    }
+    &-tertiary {
+        //margin: 0 1rem;
+    }
+
+    &-guide {
+        font-style: italic;
+        margin: 0 1rem;
+    }
+    //Main container for results
+    &__content {
+        margin: 0 2rem;
+        border-radius: 2rem;
+        background-image: url(../img/parch.jpg);
+        box-shadow: $box-shadow-light;
+        background-size: cover;
+        overflow: hidden;
+    
+        display: flex;
+       
+    }
+     //Left side
+    &__left {
+    display: flex;
+    justify-content: center;
+    margin: 0 2rem;
+    //main image
+        &--img {
+            border-radius: 5rem;
+            height: 91.5%;
+            align-self: center;
+            border: 2rem solid $color-primary;
+        }
+    }
+    //Right side
+    &__right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: $color-primary;
+        border-radius: 5rem;
+        margin: 2rem 2rem;
+        
+        //Styles for JS innerHTML
+        &--num {
+            font-size: 2.5rem;
+        }
+
+        &--text {
+            font-size: 1.5rem;
+            color: $color-white;
+            padding: 1rem 3rem;
+            border: 1rem solid $color-reading-border;
+            border-radius: 2rem;
+            margin: 0 2rem;
+        }
+    
+        &--genie {
+            font-size: $default-font-size;
+        }
+        //Placeholder text before JS
+        &--placeHolder {
+            width: 49rem;
+            font-size: 4rem;
+            text-align: center;
+            color: $color-white;
+        }
+    }
+}

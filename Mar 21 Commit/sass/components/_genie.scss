@@ -1,0 +1,115 @@
+/*PAGE FOR GENIE'S BIO*/
+.genies {
+    grid-column: 1 / span 8;
+
+}
+
+.genie {
+    @include section-setup;
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
+
+    &-heading {
+        margin: 3rem 0 ;
+        grid-column: 1 / span 2;
+    }
+
+    &__container {
+        background-color: $color-secondary-background;
+        box-shadow: $box-shadow-light;
+        border-radius: 1rem;
+        margin-bottom: 3rem;
+
+        &--img {
+            padding: 3rem 3rem; 
+            width: 75%;  
+                
+        }
+
+        &--quote {
+            margin-top: 2rem;
+            font-style: italic;
+            font-size: $default-font-size;
+            color: $color-grey-dark-1;
+        }
+
+        &--text {
+            width: 75%;
+            padding: 3rem 3rem;
+        }
+    }
+
+    &__img {
+        border-radius: 50%;
+        border: .5px solid $color-reading-border;
+        box-shadow: $box-shadow-light;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    &__about {
+        grid-column: 2 / 3;
+        font-size: 2rem;
+        color: $color-grey-dark-1;
+    }
+
+    &__list {
+        list-style: circle;
+        padding-left: 4rem;
+        
+
+        &--item {
+            padding: .8rem;
+        }
+
+        &--link{
+            @include link-style;
+        }
+    }
+
+    &__private {
+        grid-column: 2 / 3;
+        background-color: $color-primary-background;
+        color: $color-white;
+        box-shadow: $box-shadow-light;
+        padding: 2rem 0;
+        border-radius: 1rem;
+        margin-top: 5rem;
+        display: grid;
+        justify-content: center; 
+        
+
+        &--heading {
+            //color: $color-white;
+            font-size: 2rem;
+            margin-bottom: .5rem;
+            text-align: center;
+        }
+
+        &--form {
+
+        }
+
+        &--list {
+           
+        }
+
+        &--item {
+            list-style: none;
+            padding: .5rem;
+
+        }
+
+        &--input {
+            width: 25rem;
+            border-radius: 1rem;
+            padding: 1rem;
+            outline: none;
+            color: $color-grey-dark-1;
+            font-size: 1rem;
+        }
+
+        &--btn {
+            margin-left: 10rem;
+        }
+    }
+}

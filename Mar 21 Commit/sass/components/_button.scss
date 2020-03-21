@@ -1,0 +1,28 @@
+/*REUSEABLE BUTTON
+
+Styling for the buttons on the page. Currently there are only two buttons and both are for the card readings. They are styled the same.*/
+
+.btn-inline { 
+    &,
+    &:link,
+    &:visited {
+        border: none;
+        outline: none;
+        background-image: linear-gradient(to right, $color-primary, $color-secondary);
+        text-transform: uppercase;
+        padding: 1rem 1.5rem;
+        border-radius: 3rem;
+        margin: 1rem 2rem 0;
+        transition: all .2s;
+        position: relative;
+        font-size: $default-font-size;
+        box-shadow: $box-shadow-light;
+        color: $color-white;
+        cursor: pointer;
+    }
+    
+    &:hover,
+    &:focus {
+        box-shadow: $box-shadow-btn-press;
+    }
+}

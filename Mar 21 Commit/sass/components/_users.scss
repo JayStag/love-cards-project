@@ -1,0 +1,51 @@
+/*TESTIMONIALS*/
+.users {
+    grid-column: col-start 1 / col-end 8;
+}
+
+.user {
+    @include section-setup;
+    grid-template-columns: repeat(3, minmax(min-content, 1fr));
+   
+
+    &__card {
+        background-color: $color-secondary-background;
+        color: $color-grey-dark-1;
+        box-shadow: $box-shadow-light;
+        border-radius: 1rem;
+        padding: 3rem 1rem;
+        margin: 5rem 2rem;
+        
+        display: grid;
+        justify-items: center;
+        grid-row: 2 / 2;
+
+        &--fig {
+            display: flex;
+            align-items: center;
+        }
+    
+        &--box {
+            padding-left: 2rem;
+        }
+    
+        &--img {
+            height: 6rem;
+            width: 6rem;
+            border-radius: 50%;
+            margin-left: 2rem;
+        }
+    
+        &--name {
+            font-size: $default-font-size; 
+        }
+    
+        &--quote{
+            @include quotes;
+        }
+    }
+    &-heading {
+        grid-column: 1 / -1;
+        margin-top: 3rem;
+    }
+}

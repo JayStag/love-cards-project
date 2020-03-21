@@ -1,0 +1,119 @@
+/*CARD READINGS RESULTS
+This popup card is for style and formating puposes to demonstrate what could happen when a user clicks the 'Cupid' button.
+
+The card is divide to left and right sides.*/
+
+// .popup { 
+//     height: 100vh;
+//     width: 100%;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     background-color: rgba(0,0,0, .6);
+//     z-index: 100;
+//     opacity: 1;
+//     visibility: hidden;
+//     transition: all .2s;
+
+//     &__content {
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, -50%);
+//         width: 70%;
+//         height: 100%;
+//         margin: 0 2rem;
+//         padding: 0 2rem;
+//         border-radius: 2rem;
+//         background-color: $color-secondary-background;
+//         overflow: hidden;
+//         opacity: 1;
+//         transform: translate(-50%, -50%) scale(.25);
+//         transition: all .3s .2s;
+
+//         display: flex;
+//         justify-content: center;
+//     }
+
+//     &__left {
+//         display: flex;
+//         justify-content: center;
+//         margin: 0 4rem;
+//     }
+
+//     &__right {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: space-evenly;
+//         background-color: $color-primary;
+//         border-radius: 5rem;
+//         margin: 2rem 2rem;
+//         box-shadow: $box-shadow-dark;
+//         //border: 2rem solid var(--color-secondary);
+//     }
+
+//     &__img {
+//         border-radius: 5rem;
+//         height: 90%;
+//         box-shadow: $box-shadow-dark;
+//         align-self: center;
+//         border: 2rem solid $color-primary;
+
+//     }
+
+//     &__num {
+//         font-size: $default-font-size;
+//     }
+
+//     &__text {
+//         font-size: 1.5rem;
+//         color: var(--color-white);
+//         padding: 0 3rem;
+//         border: 1rem solid var(--color-secondary);
+//         border-radius: 2rem;
+//         padding-bottom: 1rem;
+//     }
+
+//     &-heading {
+//         font-size: 3rem;
+//         border-bottom: 2px solid var(--color-secondary);
+//     }
+
+//     &-guide {
+//         font-style: italic;
+//     }
+
+//     &__genie {
+//         font-size: var(--default-font-size);
+//     }
+
+//     &:target {
+//         opacity: 1;
+//         visibility: visible;
+//     }
+
+//     &:target &__content {
+//         opacity: 1;
+//         transform: translate(-50%, -50%) scale(1);
+//     }
+
+//     &__close {
+//         &:link,
+//         &:visited {
+//             color: var(--color-grey-dark);
+//             position: absolute;
+//             top: 2rem;
+//             right: 2rem;
+//             font-size: 3rem;
+//             text-decoration: none;
+//             display: inline-block;
+//             transition: all .2s;
+//             line-height: 1;
+//         }
+
+//         &:hover {
+//             color: var(--color-primary);
+//         }
+//     }
+// }

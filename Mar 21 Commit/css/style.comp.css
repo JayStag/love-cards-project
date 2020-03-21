@@ -1,0 +1,576 @@
+/*MIXINS Section*/
+/*MEDIA QUERY FOR RESPONSIVE DESIGN*/
+/*
+0-600px: phone
+600-900: tablet/portrait
+900-1200: tablet/landscape
+1200-1800: Normal styles
+1800+: Large desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+/*BOX SHADOWS*/
+/* OLDER ANIMATIONS
+Kept in place in case we use them later in the project. If not, then this will be removed
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+*/
+/*INITIAL PROJECT SETTINGS*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+/*MEDIA QUERIES*/
+html {
+  font-size: 62.5%;
+  /* 1 rem is 10px(defaut viewport) | 100% = 16px 10/16 = .625 = 62.5% for 10px */ }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+/*BASELINE SETTINGS*/
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777; }
+
+.container {
+  display: grid;
+  grid-template-rows: 60vh repeat(5, min-content);
+  grid-template-columns: [full-start] repeat(10, [col-start] minmax(min-content, 15rem) [col-end]) [full-end];
+  background-color: #faf9f9; }
+
+::selection {
+  background-color: #b08cf4;
+  color: #f7f1a8; }
+
+/*REUSEABLE HEADINGS and PARAGRAPH CLASSES*/
+.heading-primary {
+  color: #fff;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 2rem; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1rem; }
+
+.heading-secondary {
+  font-size: 3rem;
+  font-weight: 700;
+  display: inline-block;
+  color: #fff;
+  letter-spacing: .2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2rem; } }
+
+.heading-tertiary {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 2rem; }
+
+.paragraph {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center; }
+
+/*REUSABLE HELPER CLASSES*/
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-medium {
+      padding: 3rem !important; } }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-big {
+      padding: 5rem !important; } }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
+
+/*REUSEABLE BUTTON
+
+Styling for the buttons on the page. Currently there are only two buttons and both are for the card readings. They are styled the same.*/
+.btn-inline, .btn-inline:link, .btn-inline:visited {
+  border: none;
+  outline: none;
+  background-image: linear-gradient(to right, #b08cf4, #f7f1a8);
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  border-radius: 3rem;
+  margin: 1rem 2rem 0;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.8rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+  color: #fff;
+  cursor: pointer; }
+
+.btn-inline:hover, .btn-inline:focus {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+/*PAGE FOR GENIE'S BIO*/
+.genies {
+  grid-column: 1 / span 8; }
+
+.genie {
+  background-color: #b08cf4a8;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  margin: 7rem 3rem;
+  padding-bottom: 4rem;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(2, minmax(min-content, 1fr)); }
+  .genie-heading {
+    margin: 3rem 0;
+    grid-column: 1 / span 2; }
+  .genie__container {
+    background-color: #f7f1a8a8;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    margin-bottom: 3rem; }
+    .genie__container--img {
+      padding: 3rem 3rem;
+      width: 75%; }
+    .genie__container--quote {
+      margin-top: 2rem;
+      font-style: italic;
+      font-size: 1.8rem;
+      color: #333; }
+    .genie__container--text {
+      width: 75%;
+      padding: 3rem 3rem; }
+  .genie__img {
+    border-radius: 50%;
+    border: 0.5px solid #f5970b;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    margin: 0 auto; }
+  .genie__about {
+    grid-column: 2 / 3;
+    font-size: 2rem;
+    color: #333; }
+  .genie__list {
+    list-style: circle;
+    padding-left: 4rem; }
+    .genie__list--item {
+      padding: .8rem; }
+    .genie__list--link {
+      text-decoration: none;
+      color: #333;
+      padding: 3px;
+      border-bottom: 0.5px solid #b08cf4; }
+  .genie__private {
+    grid-column: 2 / 3;
+    background-color: #b08cf4a8;
+    color: #fff;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+    padding: 2rem 0;
+    border-radius: 1rem;
+    margin-top: 5rem;
+    display: grid;
+    justify-content: center; }
+    .genie__private--heading {
+      font-size: 2rem;
+      margin-bottom: .5rem;
+      text-align: center; }
+    .genie__private--item {
+      list-style: none;
+      padding: .5rem; }
+    .genie__private--input {
+      width: 25rem;
+      border-radius: 1rem;
+      padding: 1rem;
+      outline: none;
+      color: #333;
+      font-size: 1rem; }
+    .genie__private--btn {
+      margin-left: 10rem; }
+
+/*INFORMATION PAGE*/
+.info {
+  grid-column: col-start 1 / col-end 8; }
+
+.about-line {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -o-linear-gradient(left, #ccc, #333, #ccc); }
+
+.about {
+  background-color: #b08cf4a8;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  margin: 7rem 3rem;
+  padding-bottom: 4rem;
+  display: grid;
+  justify-items: center; }
+  .about__container {
+    height: 17rem;
+    width: 20rem;
+    padding: 2rem 2rem;
+    background-color: #f7f1a8a8;
+    border-radius: 1rem;
+    margin: 5rem 4rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2); }
+  .about__heading {
+    margin: 3rem 0;
+    display: grid;
+    grid-column: 1 / span 3; }
+  .about__paragraph {
+    font-size: 2rem;
+    padding: 1rem 0; }
+
+/*CARD READINGS RESULTS
+This popup card is for style and formating puposes to demonstrate what could happen when a user clicks the 'Cupid' button.
+
+The card is divide to left and right sides.*/
+/*CARD READINGS*/
+.cards {
+  grid-column: col-start 1 / col-end 8; }
+
+.reading {
+  background-color: #b08cf4a8;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  margin: 7rem 3rem;
+  padding-bottom: 4rem;
+  display: grid;
+  justify-items: center;
+  /*CARD READINGS RESULTS
+
+The card is divide to left and right sides.*/ }
+  .reading__heading {
+    margin-top: 3rem; }
+  .reading__paragraph {
+    color: #fff;
+    padding: 2rem 0;
+    font-size: 2rem; }
+  .reading__container {
+    background-color: #f7f1a8a8;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    margin: 3rem 3rem;
+    padding: 3rem 7rem;
+    width: 80%;
+    display: grid;
+    align-content: center;
+    justify-content: center; }
+  .reading__cards--cupid {
+    background-color: #b08cf4;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    display: grid;
+    justify-items: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    width: 100%; }
+  .reading__cards--guidance {
+    background-color: #b08cf4;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    padding: 2rem 0;
+    width: 100%;
+    display: grid;
+    justify-items: center; }
+  .reading__cards--paragraph {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    color: #fff; }
+  .reading__input {
+    padding: 2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between; }
+    .reading__input--number {
+      height: 2rem;
+      width: 20rem;
+      font-size: 1.5rem;
+      border-radius: 1rem;
+      outline: none;
+      margin-right: 3rem; }
+    .reading__input--color {
+      height: 2rem;
+      width: 20rem;
+      font-size: 1.5rem;
+      border-radius: 1rem;
+      outline: none;
+      margin-right: 3rem; }
+    .reading__input--direction {
+      height: 2rem;
+      width: 20rem;
+      font-size: 1.5rem;
+      border-radius: 1rem;
+      outline: none;
+      margin-right: 3rem; }
+  .reading-heading {
+    font-size: 3rem;
+    border-bottom: 2px solid #f7f1a8; }
+  .reading-guide {
+    font-style: italic;
+    margin: 0 1rem; }
+  .reading__content {
+    margin: 0 2rem;
+    border-radius: 2rem;
+    background-image: url(../img/parch.jpg);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+    background-size: cover;
+    overflow: hidden;
+    display: flex; }
+  .reading__left {
+    display: flex;
+    justify-content: center;
+    margin: 0 2rem; }
+    .reading__left--img {
+      border-radius: 5rem;
+      height: 91.5%;
+      align-self: center;
+      border: 2rem solid #b08cf4; }
+  .reading__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #b08cf4;
+    border-radius: 5rem;
+    margin: 2rem 2rem; }
+    .reading__right--num {
+      font-size: 2.5rem; }
+    .reading__right--text {
+      font-size: 1.5rem;
+      color: #fff;
+      padding: 1rem 3rem;
+      border: 1rem solid #f5970b;
+      border-radius: 2rem;
+      margin: 0 2rem; }
+    .reading__right--genie {
+      font-size: 1.8rem; }
+    .reading__right--placeHolder {
+      width: 49rem;
+      font-size: 4rem;
+      text-align: center;
+      color: #fff; }
+
+/*SIDEBAR BLOG*/
+.sidebar {
+  grid-column: col-start 9 / -1;
+  grid-row: 2 / span 4;
+  background-color: #f7f1a8a8;
+  font-size: 1.5rem;
+  border-left: 3px solid #b08cf4a8; }
+  .sidebar__blog {
+    display: grid;
+    justify-items: center;
+    margin: 6rem 2rem;
+    padding: 2rem 1rem;
+    border-radius: 1rem; }
+    .sidebar__blog--list {
+      list-style: none;
+      padding: 3px; }
+    .sidebar__blog--item {
+      font-weight: 500;
+      padding: 2.5rem 0rem .5rem 0;
+      text-align: center; }
+    .sidebar__blog--link {
+      text-decoration: none;
+      color: #333;
+      padding: 3px;
+      border-bottom: 0.5px solid #b08cf4; }
+    .sidebar__blog--heading {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #333;
+      border-bottom: 1.5px solid #b08cf4; }
+
+.sidebar-line {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -o-linear-gradient(left, #ccc, #333, #ccc); }
+
+/*TESTIMONIALS*/
+.users {
+  grid-column: col-start 1 / col-end 8; }
+
+.user {
+  background-color: #b08cf4a8;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  margin: 7rem 3rem;
+  padding-bottom: 4rem;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, minmax(min-content, 1fr)); }
+  .user__card {
+    background-color: #f7f1a8a8;
+    color: #333;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    padding: 3rem 1rem;
+    margin: 5rem 2rem;
+    display: grid;
+    justify-items: center;
+    grid-row: 2 / 2; }
+    .user__card--fig {
+      display: flex;
+      align-items: center; }
+    .user__card--box {
+      padding-left: 2rem; }
+    .user__card--img {
+      height: 6rem;
+      width: 6rem;
+      border-radius: 50%;
+      margin-left: 2rem; }
+    .user__card--name {
+      font-size: 1.8rem; }
+    .user__card--quote {
+      font-style: italic;
+      font-size: 1.8rem;
+      padding-bottom: 3rem; }
+  .user-heading {
+    grid-column: 1 / -1;
+    margin-top: 3rem; }
+
+/*FOOTER*/
+.footer {
+  background-color: #777;
+  grid-column: full-start / full-end;
+  height: 15rem; }
+  .footer__text {
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 5rem; }
+
+/*HEADER*/
+.header {
+  grid-column: full-start / full-end;
+  background-image: linear-gradient(to left top, rgba(176, 140, 244, 0.8), rgba(247, 241, 168, 0.8)), url(../img/psyche-header.jpg);
+  background-size: cover;
+  background-position: top;
+  height: 60vh;
+  position: relative; }
+  .header__logo-box {
+    /*in place in case there is a logo for the site*/ }
+  .header__text-box {
+    position: absolute;
+    top: 15%;
+    margin-left: 3rem; }
+
+/*HEADER NAVIGATION*/
+.navigation {
+  display: grid;
+  justify-content: end; }
+  .navigation__nav {
+    padding-top: 1rem; }
+    .navigation__nav--list {
+      list-style: none; }
+    .navigation__nav--item {
+      display: inline-block;
+      margin-left: 2rem;
+      margin-right: 3rem; }
+    .navigation__nav--link:link, .navigation__nav--link:visited {
+      text-decoration: none;
+      color: #333;
+      padding: 3px;
+      border-bottom: 0.5px solid #b08cf4;
+      font-size: 1.5rem;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom 0.2s;
+      color: #fff; }
+    .navigation__nav--link:hover, .navigation__nav--link:active {
+      border-bottom: 2px solid #b08cf4; }

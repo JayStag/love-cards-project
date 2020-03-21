@@ -1,0 +1,46 @@
+/*HEADER*/
+.header {
+    grid-column: full-start / full-end;
+    
+    background-image: linear-gradient(
+            to left top,
+            rgba(#b08cf4, 0.8), 
+            rgba(#f7f1a8, 0.8)), 
+        url(../img/psyche-header.jpg);
+    background-size: cover;
+    background-position: top;
+    height: 60vh;
+    position: relative;
+
+    &__logo-box {
+
+       /*in place in case there is a logo for the site*/
+        
+    }
+
+    &__text-box {
+        position: absolute;
+        top: 15%; 
+        margin-left: 3rem;
+    
+    }
+
+    &__navigation {
+
+    }
+
+    &__nav {
+
+        &--list {
+
+        }
+
+        &--item {
+
+        }
+
+        &--link {
+            
+        }
+    }
+}
