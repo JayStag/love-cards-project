@@ -1,0 +1,330 @@
+<!-- 
+***************************************LOVE CARDS ORACLE PROJECT**************************************
+******************************************************************************************************
+This website is created for Genie Joseph. It's purpose is to provide advice and guidance to those who have struggled to find a meaningful connection in thier love life. The content is based off of the work of Genie's blogs and the principles discussed in them. The blog posts are linked on this page in the sidebar from Healthy-Relationship-Advice.com.
+
+Project began in October, 2019
+First iteration of this website was completed in February 7th, 2020.
+Second iteration: March 21st, 2020.
+Third iteration: March 29th, 2020 (Thanks, Coronavirus...).
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+      <!-- <link rel="stylesheet" href="css/icon-font.css"> -->
+      
+      <link rel="stylesheet" href="css/style.css">
+     <!-- <link rel="shortcut icon" type="image/png" href="img/favicon.png">-->
+      
+     <!--
+         HTML structure using the BEM methodology. 
+     -->
+      <title>Love Cards Oracle</title>
+    </head>
+
+    <body class="container">
+        <header class="header">
+            <div class="header__text">
+                <h1 class="heading-primary">
+                    <span class="heading-primary--main">Love Cards Oracle</span>
+                </h1>
+                <h2 class="heading-primary">
+                    <span class="heading-primary--sub">Whatever the Problem</span>
+                    <span class="heading-primary--sub">Love Finds the Solution</span>
+                </h2>
+            </div>
+            <div class="nav">
+                <nav class="nav__box">
+                      <ul class="nav__list">
+                        <li class="nav__item"><a href="#cards" class="nav__link">Reading</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#users" class="nav__link">Testimonials</a></li>
+                        <li class="nav__item"><a href="#genie" class="nav__link">Genie</a></li>
+                      </ul> 
+                </nav>
+            </div>
+            <!-- <div class="header__logo">
+                <img src="img/genie.jpg" alt="placeholder image" class="header__logo--img">
+            </div> -->
+        </header>
+
+        <section class="cards" id="cards">
+            <div class="reading">
+                <h2 class="heading-secondary reading__heading">Here is the guidance you seek</h2>
+                <p class="paragraph reading__paragraph">The Love Cards Oracle is for predictions or fortune-telling. 
+                </p>
+                <p class="paragraph reading__paragraph">These insights are designed to help you understand the changes you need to make changes you need to make to find the partnership of your dreams.
+                </p>
+                <div class="reading__container">
+                    <div class="reading__cupid">
+                        <p class="reading__paragraph">Take a chance with “Cupid’s Arrow"</p>
+                        <button class="btn-inline cupid">Cupid's Arrow</button>
+                    </div>
+                    <div class="reading__guidance">
+                        <p class="reading__paragraph">Get guidance for inspired action</p>
+                        <div class="reading__input">
+                            <input name="number" id="number" type="interger" class="reading__input--number" placeholder="Enter a number from 1-333" required="required">
+                
+                            <select name="color" id="color" class="reading__input--color" required="required">
+                                <option value="blue" class="reading__input--colors">Blue</option>
+                                <option value="red" class="reading__input--colors">Red</option>
+                                <option value="orange" class="reading__input--colors">Orange</option>
+                                <option value="green" class="reading__input--colors">Green</option>
+                                <option value="yellow" class="reading__input--colors">Yellow</option>
+                                <option value="purple" class="reading__input--colors">Purple</option>
+                                <option value="purple" class="reading__input--colors">Pink</option>
+                            </select>
+
+                            <select name="direction" id="direction" class="reading__input--direction" required="required">
+                                <option value="north" class="reading__input--directions">North</option>
+
+                                <option value="south" class="reading__input--directions">South</option>
+
+                                <option value="east" class="reading__input--directions">East</option>
+
+                                <option value="west" class="reading__input--directions">West</option>
+
+                                <option value="north-east"
+                                class="reading__input--directions">North East</option>
+
+                                <option value="north-west" class="reading__input--directions">North West</option>
+
+                                <option value="south-east" class="reading__input--directions">South East</option>
+
+                                <option value="south-west" class="reading__input--directions">South West</option>
+                            </select>
+                        </div>
+                        <button class="btn-inline inspired">Inspired Guidance</button>
+                    </div>
+                </div>
+                <div class="reading__content">
+                    <div class="reading__left">
+                        <img src="img/psyche-large.jpg" alt="angel image" class="reading__left--img">
+                    </div>
+                    <div class="reading__right">
+                        <!-- <a href="#cards" class="reading__right--close">&times;</a> -->
+                        <!-- <p class="reading__right--num">122</p>
+                        <h2 class="heading-secondary reading-heading">The Mirage</h2>
+                        <h3 class="heading-tertiary reading-tertiary">It is Easy to Think the Grass is Greener Somewhere Else, But When You Get Closer, It is the Same.</h3>
+                        <p class="reading__right--text">
+                            Sometimes someone appears who seems to be everything that you are missing. It is easy to look at someone else’s relationship and imagine that they have a perfect one, or that their partner is the one for you. If there is a quality you admire in another, how can you use this as an opportunity to develop more of that quality within yourself? When the perfect charmer appears you can enjoy the gifts they have to offer, but don’t be seduced into thinking they are something that they are not.
+                        </p>
+                        <h3 class="heading-secondary reading-guidance">Guidance:</h3>
+                        <h3 class="heading-tertiary reading-guide">Mermaids and mer-men will eventually slip back into the sea.</h3>
+                        <p class="reading__right--genie">&copy; Genie Joseph, PhD</p> -->
+                        <p class="paragrah reading__right--placeHolder">You're Reading Awaits You</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info" id="about">
+            <div class="about">
+                <h2 class="heading-secondary about__heading">
+                    What's holding you back from real love?
+                </h2>
+                <div class="about__container">
+                    <p class="paragraph about__paragraph">
+                        Dissolve Obstacles to Love
+                    </p>
+                    <hr class="about-line">
+                    <p class="paragraph about__paragraph">
+                        Love through deeper insight into patterns
+                    </p>
+                </div>
+                <div class="about__container">
+                    <p class="paragraph about__paragraph">
+                        Release Old Blocks 
+                    </p>
+                    <hr class="about-line">
+                    <p class="paragraph about__paragraph">
+                        Learn to open your heart to true intimacy
+                    </p>
+                </div>
+                <div class="about__container">
+                    <p class="paragraph about__paragraph">
+                        Oracle Love Cards
+                    </p>
+                    <hr class="about-line">
+                    <p class="paragraph about__paragraph">
+                        For those who seek to open the door to love
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="users" id="users">
+            <div class="user">
+                <h2 class="heading-secondary user-heading">Meet others like you</h2>
+                <figure class="user__card">
+                    <blockquote class="user__quote">
+                        &quot;Genie's advice has changed my whole life.&quot;
+                    </blockquote>
+                    <figcaption class="user__fig">
+                        <img src="../img/user6.jpg" alt="user" class="user__img">
+                        <div class="user__box">
+                            <p class="user__name">Brittany Bates</p>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure class="user__card">
+                    <blockquote class="user__quote">
+                        &quot;Love card readings really helped give me perspective on myself.&quot;
+                    </blockquote>
+                    <figcaption class="user__fig">
+                        <img src="../img/user2.jpg" alt="user" class="user__img">
+                        <div class="user__box">
+                            <p class="user__name">Kate Smith</p>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure class="user__card">
+                    <blockquote class="user__quote">
+                        &quot;I found true inspiration to love again.&quot;
+                    </blockquote>
+                    <figcaption class="user__fig">
+                        <img src="../img/user3.jpg" alt="user" class="user__img">
+                        <div class="user__box">
+                            <p class="user__name">Dolores Ford</p>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure class="user__card">
+                    <blockquote class="user__quote">
+                        &quot;My boyfriend and I were able to finally connect with each other.&quot;
+                    </blockquote>
+                    <figcaption class="user__fig">
+                        <img src="../img/user4.jpg" alt="user" class="user__img">
+                        <div class="user__box">
+                            <p class="user__name">Addison Stewart</p>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure class="user__card">
+                    <blockquote class="user__quote">
+                        &quot;I was able to rekindle the spark with my wife.&quot;
+                    </blockquote>
+                    <figcaption class="user__fig">
+                        <img src="../img/user5.jpg" alt="user" class="user__img">
+                        <div class="user__box">
+                            <p class="user__name">Jerome Austin</p>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure class="user__card">
+                    <blockquote class="user__quote">
+                        &quot;The readings helped me find meaning in my relationships.&quot;
+                    </blockquote>
+                    <figcaption class="user__fig">
+                        <img src="../img/user1.jpg" alt="user" class="user__img">
+                        <div class="user__box">
+                            <p class="user__name">Carrie Boyd</p>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="genies" id="genie">
+            <div class="genie">
+                <h2 class="heading-secondary genie-heading">Genie Joseph, PhD</h2>
+                <div class="genie__container genie__container--img">
+                    <img src="../img/genie.jpg" alt="genie" class="genie__img">
+                    <p class="paragraph genie__quote">&quot;I want to help make your relationships successful!&quot;</p>
+                    <div class="genie__private">
+                        <h3 class="genie__private--heading">Would you like a private reading?</h3>
+                        <h3 class="genie__private--heading">Fill out the below information</h3>
+                        <form action="#" class="genie__private--form" id="privateForm">
+                            <ul class="genie__private--list"></ul>
+                                <li class="genie__private--item"></li>
+                                    <input type="text" class="genie__private--input" id="name" placeholder="Your Name" required>
+                                </li>
+                                <li class="genie__private--item"></li>
+                                    <input type="email" class="genie__private--input" id="email" placeholder="Email Address" required>
+                                </li>
+                                <li class="genie__private--item"></li>
+                                    <button type="submit" action="#" id="submit" class="genie__private--btn btn-inline">Submit</button>
+                                </li>   
+                            </ul>
+                        </form>
+                    </div> 
+                </div>
+                <div class="genie__container genie__container--text">
+                    <h2 class="heading-secondary genie__blog--heading">CV</h2>
+                    <div class="genie__about">
+                        <ul class="genie__list">
+                            <li class="genie__item">Relationship Coach 20 + years</li>
+                            <li class="genie__item">Co-Host of Love Life Radio 6 + years</li>
+                            <li class="genie__item">Published Author</li>
+                            <li class="genie__item">Frequent Guest on Radio & TV shows</li>
+                            <li class="genie__item">Experienced Public Speaker and Seminar Presenter</li>
+                            <li class="genie__item">Licensed Minister</li>
+                            <li class="genie__item"><a target="_blank" rel="noopener noreferrer" href="https://lightwave7.wixsite.com/act-resilient" class="genie__link">Founder of Act Resilient</a></li>
+                            <li class="genie__item"><a target="_blank" rel="noopener noreferrer" href="https://www.animal-consciousness.org" class="genie__link">Creator of Animal Consciousness</a></li>
+                            <li class="genie__item"><a target="_blank" rel="noopener noreferrer" href="https://lightwave7.wixsite.com/freefilmschool" class="genie__link">Founder of Free Film School</a></li>
+                            <li class="genie__item"><a target="_blank" rel="noopener noreferrer" href="https://independentfilmarizona.com" class="genie__link">President of Indpendent Film Arizona</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="genie__container genie__container--blog">
+                    <h2 class="heading-secondary genie__blog--heading">Genie's Blogs</h2>
+                    <div class="genie__blog">
+                        <ul class="genie__list">
+                            <li class="genie__item"><a target="_blank" rel="noopener noreferrer" href="https://www.healthy-relationship-advice.com/avoiding-fights.html" class="genie__link">Avoiding Fights 
+                                And Improving Understanding</a></li>
+                            <li class="genie__item"><a target="_blank" rel="noopener noreferrer" href="https://www.healthy-relationship-advice.com/art-of-apology.html" class="genie__link">The Art of Apology Five Tips For Men</a></li>
+                            <li class="genie__item"><a target="_blank" rel="noopener noreferrer" href="https://www.healthy-relationship-advice.com/communication-tips-for-men.html" class="genie__link">Communication Tips For Men</a></li>
+                            <li class="genie__item"><a target="_blank" rel="noopener noreferrer" href="https://www.healthy-relationship-advice.com/Love-yourself.html" class="genie__link">Love Yourself First</a></li>
+                            <li class="genie__item"><a target="_blank" rel="noopener noreferrer" href="https://www.healthy-relationship-advice.com/sexual-shame.html" class="genie__link">Healing Sexual Shame</a></li>
+                            <li class="genie__item"><a target="_blank" rel="noopener noreferrer" href="https://www.healthy-relationship-advice.com/Love-yourself.html" class="genie__link">Love Yourself First</a></li>
+                            <li class="genie__item"><a target="_blank" rel="noopener noreferrer" href="https://www.healthy-relationship-advice.com" class="genie__link">Read more at Healthy-Relationship-Advice.com</a></li>
+                        </ul>
+                     </div>
+                </div>
+            </div> 
+        </section>
+    
+        <footer class="footer">
+            <div class="footer__text">
+                &copy; Copyright Genie Joseph, 2020. All rights reserved. 
+            </div>
+            <div class="footer__nav">
+                <nav class="footer__box">
+                      <ul class="footer__list">
+                        <li class="footer__item"><a href="#cards" class="footer__link">Reading</a></li>
+                        <li class="footer__item"><a href="#about" class="footer__link">About</a></li>
+                        <li class="footer__item"><a href="#users" class="footer__link">Testimonials</a></li>
+                        <li class="footer__item"><a href="#genie" class="footer__link">Genie</a></li>
+                      </ul> 
+                </nav>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="js/index.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+
+        <!-- <script>
+        $('form').on('submit', (e) => {
+            e.preventDefault();
+          
+            const name = $('#name').val().trim();
+            const email = $('#email').val().trim();
+          
+            const data = {
+              name,
+              email
+            };
+
+            $.post('/email', data, function() {
+              console.log('Server received our data');
+            });
+          
+          });
+        </script> -->
+
+    </body>   
+</html>
