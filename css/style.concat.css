@@ -827,7 +827,7 @@ The card is divide to left and right sides.*/ }
 /*HEADER*/
 .header {
   grid-column: full-start / full-end;
-  background-image: linear-gradient(to left top, rgba(176, 140, 244, 0.6), rgba(247, 241, 168, 0.6)), url(../img/psyche-header.jpg);
+  background-image: linear-gradient(to left top, rgba(176, 140, 244, 0.5), rgba(247, 241, 168, 0.5)), url(../img/psyche-header.jpg);
   background-size: cover;
   background-position: top;
   position: relative; }
